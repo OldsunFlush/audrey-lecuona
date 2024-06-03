@@ -1,6 +1,6 @@
-# audrey-lecuona.com
+# audreylecuona.com
 
-A simple one-page portfolio with Astro 🚀
+A simple portfolio with Astro 🚀
 
 ## Astro Starter Kit: Basics
 
