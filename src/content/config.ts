@@ -5,7 +5,7 @@ const worksCollection = defineCollection({
   schema: ({ image }) => z.object({
     image: image(),
     title: z.string(),
-    url: z.string().optional(),
+    websiteUrl: z.string().optional(),
   }),
 });
 

@@ -1,6 +1,7 @@
 ---
 title: "Boesner"
 image: "@assets/images/works/thumbnail/boesner.jpg"
+websiteUrl: "https://www.boesner.fr/"
 ---
 
 # Refonte de la boutique Boesner

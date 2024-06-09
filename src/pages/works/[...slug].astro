@@ -1,9 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 import Layout from "@layouts/Layout.astro";
 import WorkNavigation from "@components/WorkNavigation.astro";
+
+import buttonToWebsite from "../../assets/images/button-to-website.svg";
 
 export async function getStaticPaths() {
   const works = await getCollection("works");
@@ -52,6 +54,13 @@ const { Content } = await work.render();
   <main class="container pt-24 pb-12">
     <div>
       <Content />
+      {
+        work.data.websiteUrl && (
+          <a href={work.data.websiteUrl} target="_blank">
+            <Image src={buttonToWebsite} alt={`Vers le site de ${work.data.title}`} />
+          </a>
+        )
+      }
       <div>
         <Image src={work.data.image} alt="" />
       </div>
