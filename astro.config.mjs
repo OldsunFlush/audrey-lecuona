@@ -7,8 +7,6 @@ export default defineConfig({
 	site: 'https://www.audreylecuona.com',
 	integrations: [
 		sitemap(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
+    tailwind(),
   ],
 });
