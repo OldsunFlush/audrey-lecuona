@@ -9,7 +9,13 @@ const { previousWork, nextPost } = Astro.props;
         href={previousWork?.slug}
         class="group relative flex flex-nowrap rounded-lg border border-black/15 px-4 py-3 pl-10 no-underline transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
       >
-        <svg
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1 12.5L24 12.5M1 12.5V12.5C4.96072 13.7377 7.91025 17.0671 8.66148 21.1481L9.18644 24M1 12.5V12.5C4.97897 11.1449 7.91949 7.75161 8.69473 3.62034L9.18644 0.999999"
+            stroke="#3D5361"
+          />
+        </svg>
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           class="absolute left-2 top-1/2 size-5 -translate-y-1/2 fill-none stroke-current stroke-2"
@@ -25,21 +31,39 @@ const { previousWork, nextPost } = Astro.props;
             points="12 5 5 12 12 19"
             class="translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
           />
-        </svg>
+        </svg> */}
         <div class="flex items-center text-sm">{previousWork?.data.title}</div>
       </a>
     ) : (
       <div class="invisible" />
     )
   }
-
+  <a href="/works" title="Retour à la galerie">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="4" cy="4" r="4" fill="white"></circle>
+      <circle cx="20" cy="4" r="4" fill="#3D5361"></circle>
+      <circle cx="36" cy="4" r="4" fill="white"></circle>
+      <circle cx="4" cy="20" r="4" fill="#3D5361"></circle>
+      <circle cx="20" cy="20" r="4" fill="#3D5361"></circle>
+      <circle cx="36" cy="20" r="4" fill="#3D5361"></circle>
+      <circle cx="4" cy="36" r="4" fill="white"></circle>
+      <circle cx="20" cy="36" r="4" fill="#3D5361"></circle>
+      <circle cx="36" cy="36" r="4" fill="white"></circle>
+    </svg>
+  </a>
   {
     nextPost?.slug ? (
       <a
         href={nextPost?.slug}
         class="group relative flex flex-grow flex-row-reverse flex-nowrap rounded-lg border border-black/15 px-4 py-4 pr-10 no-underline transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
       >
-        <svg
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23 12.5L5.84963e-07 12.5M23 12.5V12.5C19.0393 11.2623 16.0898 7.9329 15.3385 3.85185L14.8136 0.999999M23 12.5V12.5C19.021 13.855 16.0805 17.2484 15.3053 21.3797L14.8136 24"
+            stroke="#3D5361"
+          />
+        </svg>
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           class="absolute right-2 top-1/2 size-5 -translate-y-1/2 fill-none stroke-current stroke-2"
@@ -55,7 +79,7 @@ const { previousWork, nextPost } = Astro.props;
             points="12 5 19 12 12 19"
             class="-translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
           />
-        </svg>
+        </svg> */}
         <div class="flex items-center text-sm">{nextPost?.data.title}</div>
       </a>
     ) : (
