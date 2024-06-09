@@ -1,0 +1,13 @@
+---
+const { title } = Astro.props;
+---
+
+<footer class="text-center">
+  © Tous droits réservés - <span id="copyright"></span> | Audrey Lecuona
+</footer>
+
+<script>
+  const year = new Date().getFullYear();
+  const copyright = document.getElementById("copyright");
+  if (copyright) copyright.textContent = year.toString();
+</script>
