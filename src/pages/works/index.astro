@@ -18,7 +18,7 @@ import Layout from "@layouts/Layout.astro";
         worksEntries.map((worksEntry) => (
           <li class="work-thumbnail">
             <a href={`/works/${worksEntry.slug}`} title={`En savoir plus sur ${worksEntry.data.title}`}>
-              <Image src={worksEntry.data.image} alt={worksEntry.data.title} />
+              <Image src={worksEntry.data.thumbnail} alt={worksEntry.data.title} />
             </a>
           </li>
         ))

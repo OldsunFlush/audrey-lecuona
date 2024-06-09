@@ -1,6 +1,7 @@
 ---
 title: "Bulko"
-image: "@assets/images/works/thumbnail/bulko.jpg"
+thumbnail: "@assets/images/works/thumbnail/bulko.jpg"
+image: "@assets/images/works/webview/bulko.jpg"
 websiteUrl: "https://www.bulko.net/"
 ---
 
