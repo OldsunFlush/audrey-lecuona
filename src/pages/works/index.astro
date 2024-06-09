@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+const worksEntries = await getCollection("works");
+
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Réalisations">
+  <main>
+    <div>
+      <h1>Réalisations</h1>
+      <a href="">Voir mon CV</a>
+    </div>
+    <ul class="work-thumbnails">
+      {
+        worksEntries.map((worksEntry) => (
+          <li class="work-thumbnail">
+            <a href={`/works/${worksEntry.slug}`} title={`En savoir plus sur ${worksEntry.data.title}`}>
+              {worksEntry.data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
