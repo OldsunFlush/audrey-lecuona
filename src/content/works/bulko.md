@@ -1,5 +1,6 @@
 ---
 title: "Bulko"
+image: "@assets/images/works/thumbnail/bulko.jpg"
 ---
 
 # Intégration du site vitrine de l’agence Bulko

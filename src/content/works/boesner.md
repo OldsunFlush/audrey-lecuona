@@ -1,5 +1,6 @@
 ---
 title: "Boesner"
+image: "@assets/images/works/thumbnail/boesner.jpg"
 ---
 
 # Refonte de la boutique Boesner
