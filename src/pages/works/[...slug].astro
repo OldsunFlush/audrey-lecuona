@@ -1,0 +1,48 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+import Layout from '@layouts/Layout.astro';
+import WorkNavigation from "@components/WorkNavigation.astro";
+
+export async function getStaticPaths() {
+  const works = await getCollection('works');
+  return works.map(work => ({
+    params: { slug: work.slug }, props: { work },
+  }));
+}
+// type Props = CollectionEntry<"works">;
+
+const posts = await getCollection("works");
+
+function getNextWork() {
+  let postIndex;
+  for (const post of posts) {
+    if (post.slug === Astro.params.slug) {
+      postIndex = posts.indexOf(post);
+      return posts[postIndex + 1];
+    }
+  }
+}
+function getPreviousWork() {
+  let postIndex;
+  for (const post of posts) {
+    if (post.slug === Astro.params.slug) {
+      postIndex = posts.indexOf(post);
+      return posts[postIndex - 1];
+    }
+  }
+}
+const previousWork = getPreviousWork();
+const nextWork = getNextWork();
+
+const { work } = Astro.props;
+const { Content } = await work.render();
+---
+
+<Layout title={`${work.data.title} · Réalisations`}>
+  <a href="/works" class="absolute top-0 left-0 w-full">Retour</a>
+  <main class="container pt-24 pb-12">
+    <Content />
+    <WorkNavigation previousWork={previousWork} nextWork={nextWork} />
+  </main>
+</Layout>
