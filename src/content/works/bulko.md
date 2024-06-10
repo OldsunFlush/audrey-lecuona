@@ -11,8 +11,6 @@ websiteUrl: "https://www.bulko.net/"
 
 **Bulko** est une agence de communication basée sur Bordeaux.
 
-Le site commençant à dater, Boesner a demandé une refonte graphique afin de rester compétitif face à ses concurrents.
-
 **Réalisations**
 
 - Webdesign du site vitrine
