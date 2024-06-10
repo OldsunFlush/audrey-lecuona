@@ -1,24 +1,27 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 const worksEntries = await getCollection("works");
 
 import Layout from "@layouts/Layout.astro";
+import buttonToResume from "../../assets/images/button-to-resume.svg";
 ---
 
 <Layout title="Réalisations">
-  <main>
-    <div>
-      <h1>Réalisations</h1>
-      <a href="">Voir mon CV</a>
+  <main class="container max-w-6xl">
+    <div class="flex justify-between items-center pt-3 pb-3">
+      <h1 class="uppercase">Réalisations</h1>
+      <a href="" class="hover:opacity-75 hover:scale-95 transform-gpu transition-all">
+        <Image src={buttonToResume} alt="Voir mon CV" />
+      </a>
     </div>
-    <ul class="work-thumbnails">
+    <ul class="columns-3">
       {
         worksEntries.map((worksEntry) => (
-          <li class="work-thumbnail">
+          <li class="w-full aspect-auto mb-3">
             <a href={`/works/${worksEntry.slug}`} title={`En savoir plus sur ${worksEntry.data.title}`}>
-              <Image src={worksEntry.data.thumbnail} alt={worksEntry.data.title} />
+              <Image src={worksEntry.data.thumbnail} alt={worksEntry.data.title} class="rounded" />
             </a>
           </li>
         ))
