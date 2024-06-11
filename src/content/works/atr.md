@@ -1,7 +1,7 @@
 ---
 title: "ATR (Aquitaine Travaux Rénovation)"
-thumbnail: "@assets/images/works/thumbnail/atr.jpg"
-image: "@assets/images/works/webview/atr.jpg"
+thumbnail: "@assets/images/works/thumbnail/atr.webp"
+image: "@assets/images/works/webview/atr.webp"
 websiteUrl: "https://www.aquitainetravauxrenovation.fr/index.html"
 ---
 

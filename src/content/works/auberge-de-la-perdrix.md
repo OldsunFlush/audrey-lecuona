@@ -1,7 +1,7 @@
 ---
 title: "Auberge de la Perdrix"
-thumbnail: "@assets/images/works/thumbnail/auberge-de-la-perdrix.jpg"
-image: "@assets/images/works/webview/auberge-de-la-perdrix.jpg"
+thumbnail: "@assets/images/works/thumbnail/auberge-de-la-perdrix.webp"
+image: "@assets/images/works/webview/auberge-de-la-perdrix.webp"
 websiteUrl: "https://www.aubergelaperdrix.com/fr/"
 ---
 

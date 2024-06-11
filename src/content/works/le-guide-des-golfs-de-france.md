@@ -1,7 +1,7 @@
 ---
 title: "Le Guide des golfs de France"
-thumbnail: "@assets/images/works/thumbnail/le-guide-des-golfs-de-france.jpg"
-image: "@assets/images/works/webview/le-guide-des-golfs-de-france.jpg"
+thumbnail: "@assets/images/works/thumbnail/le-guide-des-golfs-de-france.webp"
+image: "@assets/images/works/webview/le-guide-des-golfs-de-france.webp"
 websiteUrl: "http://guidegolf.golf-magazine.fr/"
 ---
 

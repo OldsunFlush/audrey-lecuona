@@ -1,7 +1,7 @@
 ---
 title: "Boesner"
-thumbnail: "@assets/images/works/thumbnail/boesner.jpg"
-image: "@assets/images/works/webview/boesner.jpg"
+thumbnail: "@assets/images/works/thumbnail/boesner.webp"
+image: "@assets/images/works/webview/boesner.webp"
 websiteUrl: "https://www.boesner.fr/"
 ---
 

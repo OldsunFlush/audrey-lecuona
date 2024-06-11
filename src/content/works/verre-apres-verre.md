@@ -1,7 +1,7 @@
 ---
 title: "Verre Après Verre"
-thumbnail: "@assets/images/works/thumbnail/verre-apres-verre.jpg"
-image: "@assets/images/works/webview/verre-apres-verre.jpg"
+thumbnail: "@assets/images/works/thumbnail/verre-apres-verre.webp"
+image: "@assets/images/works/webview/verre-apres-verre.webp"
 websiteUrl: "https://www.verreapresverre.com/"
 ---
 

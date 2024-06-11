@@ -1,7 +1,7 @@
 ---
 title: "BTC Wine"
-thumbnail: "@assets/images/works/thumbnail/btc-wine.jpg"
-image: "@assets/images/works/webview/btc-wine.jpg"
+thumbnail: "@assets/images/works/thumbnail/btc-wine.webp"
+image: "@assets/images/works/webview/btc-wine.webp"
 websiteUrl: "https://www.btc-wine.com/"
 ---
 

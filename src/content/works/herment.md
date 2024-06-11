@@ -1,7 +1,7 @@
 ---
 title: "Herment"
-thumbnail: "@assets/images/works/thumbnail/herment.jpg"
-image: "@assets/images/works/webview/herment.jpg"
+thumbnail: "@assets/images/works/thumbnail/herment.webp"
+image: "@assets/images/works/webview/herment.webp"
 websiteUrl: "https://www.ets-herment.fr/"
 ---
 

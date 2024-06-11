@@ -1,7 +1,7 @@
 ---
 title: "MUST (Medical Unit and Surgical Technologies)"
-thumbnail: "@assets/images/works/thumbnail/must.jpg"
-image: "@assets/images/works/webview/must.jpg"
+thumbnail: "@assets/images/works/thumbnail/must.webp"
+image: "@assets/images/works/webview/must.webp"
 websiteUrl: "https://www.clinique-must.com/"
 ---
 

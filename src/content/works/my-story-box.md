@@ -1,7 +1,7 @@
 ---
 title: "My Story Box"
-thumbnail: "@assets/images/works/thumbnail/my-story-box.jpg"
-image: "@assets/images/works/webview/my-story-box.jpg"
+thumbnail: "@assets/images/works/thumbnail/my-story-box.webp"
+image: "@assets/images/works/webview/my-story-box.webp"
 websiteUrl: "https://falcktory.com/lifestyle/my-story-box"
 ---
 

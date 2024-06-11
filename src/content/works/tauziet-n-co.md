@@ -1,7 +1,7 @@
 ---
 title: "Tauziet & Co"
-thumbnail: "@assets/images/works/thumbnail/tauziet-n-co.jpg"
-image: "@assets/images/works/webview/tauziet-n-co.jpg"
+thumbnail: "@assets/images/works/thumbnail/tauziet-n-co.webp"
+image: "@assets/images/works/webview/tauziet-n-co.webp"
 # websiteUrl: "https://www.tauzietnco.fr/"
 ---
 

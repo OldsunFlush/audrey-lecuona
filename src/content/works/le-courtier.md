@@ -1,7 +1,7 @@
 ---
 title: "Le Courtier"
-thumbnail: "@assets/images/works/thumbnail/le-courtier.jpg"
-image: "@assets/images/works/webview/le-courtier.jpg"
+thumbnail: "@assets/images/works/thumbnail/le-courtier.webp"
+image: "@assets/images/works/webview/le-courtier.webp"
 # websiteUrl: "https://www.lecourtier.fr/"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Tatami Originals"
-thumbnail: "@assets/images/works/thumbnail/tatami-originals.jpg"
-image: "@assets/images/works/webview/tatami-originals.jpg"
+thumbnail: "@assets/images/works/thumbnail/tatami-originals.webp"
+image: "@assets/images/works/webview/tatami-originals.webp"
 websiteUrl: "https://tatami-originals.com/"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Ohlala"
-thumbnail: "@assets/images/works/thumbnail/ohlala.jpg"
-image: "@assets/images/works/webview/ohlala.jpg"
+thumbnail: "@assets/images/works/thumbnail/ohlala.webp"
+image: "@assets/images/works/webview/ohlala.webp"
 ---
 
 # Refonte du site vitrine Ohlala Collectif Créatif
