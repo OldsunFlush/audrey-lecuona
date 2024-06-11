@@ -16,12 +16,12 @@ import buttonToResume from "../../assets/images/button-to-resume.svg";
         <Image src={buttonToResume} alt="Voir mon CV" />
       </a>
     </div>
-    <ul class="columns-3">
+    <ul class="columns-2 md:columns-3 gap-3 md:gap-6">
       {
         worksEntries.map((worksEntry) => (
-          <li class="w-full aspect-auto mb-3">
+          <li class="w-full aspect-auto mb-3 md:mb-6">
             <a href={`/works/${worksEntry.slug}`} title={`En savoir plus sur ${worksEntry.data.title}`}>
-              <Image src={worksEntry.data.thumbnail} alt={worksEntry.data.title} class="rounded" />
+              <Image src={worksEntry.data.thumbnail} alt={worksEntry.data.title} class="grayscale hover:grayscale-0 rounded hover:rounded-lg transition-all" />
             </a>
           </li>
         ))
