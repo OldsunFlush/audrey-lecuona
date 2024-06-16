@@ -13,6 +13,6 @@ websiteUrl: "https://www.btc-wine.com/"
 
 Ils sont les premiers négociants en vins à accepter le Bitcoin comme moyen de paiement.
 
-**Réalisations**
+## Réalisations :
 
 - Intégration d’un thème personnalisé Prestashop

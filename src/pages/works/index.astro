@@ -6,13 +6,24 @@ const worksEntries = await getCollection("works");
 
 import Layout from "@layouts/Layout.astro";
 import buttonToResume from "../../assets/images/button-to-resume.svg";
+import linkToResume from "../../assets/documents/cv_audrey-lecuona.pdf";
 ---
 
 <Layout title="Réalisations">
+  <div class="absolute top-6 left-6">
+    <a href="/" class="inline-flex align-center">
+      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1 12.5L24 12.5M1 12.5V12.5C4.96072 13.7377 7.91025 17.0671 8.66148 21.1481L9.18644 24M1 12.5V12.5C4.97897 11.1449 7.91949 7.75161 8.69473 3.62034L9.18644 0.999999"
+          stroke="#3D5361"></path>
+      </svg>
+      <span class="pt-0.5 pl-6 hover:pl-10 text-sm transition-all">Retour à l'accueil</span>
+    </a>
+  </div>
   <main class="container max-w-6xl">
-    <div class="flex justify-between items-center pt-3 pb-3">
-      <h1 class="uppercase">Réalisations</h1>
-      <a href="" class="hover:opacity-75 hover:scale-95 transform-gpu transition-all">
+    <div class="flex justify-between items-center pt-6 pb-6">
+      <h1 class="text-2xl uppercase">Réalisations</h1>
+      <a href={linkToResume} class="hover:opacity-75 hover:scale-95 transform-gpu transition-all" download>
         <Image src={buttonToResume} alt="Voir mon CV" />
       </a>
     </div>
@@ -21,7 +32,7 @@ import buttonToResume from "../../assets/images/button-to-resume.svg";
         worksEntries.map((worksEntry) => (
           <li class="w-full aspect-auto mb-3 md:mb-6">
             <a href={`/works/${worksEntry.slug}`} title={`En savoir plus sur ${worksEntry.data.title}`}>
-              <Image src={worksEntry.data.thumbnail} alt={worksEntry.data.title} class="grayscale hover:grayscale-0 rounded hover:rounded-lg transition-all" />
+              <Image src={worksEntry.data.thumbnail} alt={worksEntry.data.title} class="grayscale hover:grayscale-0 hover:-translate-y-0.5 rounded-lg transition-all" />
             </a>
           </li>
         ))

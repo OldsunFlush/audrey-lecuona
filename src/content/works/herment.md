@@ -11,6 +11,6 @@ websiteUrl: "https://www.ets-herment.fr/"
 
 Fondée en 1936, la maison **Herment** réalise depuis 8 générations des malles cantines en acier, inox ou aluminium à destination des particuliers comme des professionnels.
 
-**Réalisations**
+## Réalisations :
 
 - Intégration d’un thème personnalisé Prestashop

@@ -12,7 +12,7 @@ Pour affirmer l'identité du Collectif la globalité du site a été revue. Un d
 
 La charte graphique a été repensée afin d’apporter un peu plus de douceur grace à ce vert profond et de dynamisme avec ce jaune vif.
 
-**Réalisations**
+## Réalisations :
 
 - Webdesign du site vitrine
 - UX & UI Design

@@ -13,6 +13,6 @@ websiteUrl: "https://www.verreapresverre.com/"
 
 La possibilité de pouvoir conditionner des vins directement chez les vignerons récoltants comme Sopardis le fait est une première mondiale.
 
-**Réalisations**
+## Réalisations :
 
 - Intégration d’un thème personnalisé Prestashop

@@ -13,7 +13,7 @@ websiteUrl: "https://www.aubergelaperdrix.com/fr/"
 
 Pour maximiser sa visibilité elle a fait appel à **Bulko** pour refondre sa charte graphique et développer un site vitrine.
 
-**Réalisations**
+## Réalisations :
 
 - Webdesign du site vitrine
 - Intégration via un framework custom

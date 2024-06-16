@@ -3,8 +3,10 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
 import Layout from "@layouts/Layout.astro";
-import WorkNavigation from "@components/WorkNavigation.astro";
+import Prose from "@components/Prose.astro";
+import Navigation from "@components/Navigation.astro";
 
+import mouseScrollGif from "../../assets/images/mouse-scroll.gif";
 import buttonToWebsite from "../../assets/images/button-to-website.svg";
 
 export async function getStaticPaths() {
@@ -43,28 +45,62 @@ const { Content } = await work.render();
 ---
 
 <Layout title={`${work.data.title} · Réalisations`}>
-  <a href="/works" class="absolute top-0 left-0 w-full flex align-center">
-    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M1 12.5L24 12.5M1 12.5V12.5C4.96072 13.7377 7.91025 17.0671 8.66148 21.1481L9.18644 24M1 12.5V12.5C4.97897 11.1449 7.91949 7.75161 8.69473 3.62034L9.18644 0.999999"
-        stroke="#3D5361"></path>
-    </svg>
-    Retour à la galerie
-  </a>
-  <main class="container pt-24 pb-12">
-    <div>
-      <Content />
-      {
-        work.data.websiteUrl && (
-          <a href={work.data.websiteUrl} target="_blank">
-            <Image src={buttonToWebsite} alt={`Vers le site de ${work.data.title}`} />
-          </a>
-        )
-      }
-      <div>
-        <Image src={work.data.image} alt="" />
+  <div class="w-full p-6 pb-12">
+    <a href="/works" class="inline-flex align-center">
+      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1 12.5L24 12.5M1 12.5V12.5C4.96072 13.7377 7.91025 17.0671 8.66148 21.1481L9.18644 24M1 12.5V12.5C4.97897 11.1449 7.91949 7.75161 8.69473 3.62034L9.18644 0.999999"
+          stroke="#3D5361"></path>
+      </svg>
+      <span class="pt-0.5 pl-6 hover:pl-10 text-sm transition-all">Retour à la galerie</span>
+    </a>
+  </div>
+  <main class="container">
+    <div class="flex">
+      <div class="w-full md:w-2/5 md:mr-[10%]">
+        <Prose>
+          <Content />
+        </Prose>
+        {
+          work.data.websiteUrl && (
+            <a
+              href={work.data.websiteUrl}
+              target="_blank"
+              class="inline-flex mt-12 hover:opacity-75 hover:scale-95 transform-gpu transition-all"
+            >
+              <Image src={buttonToWebsite} alt={`Vers le site de ${work.data.title}`} />
+            </a>
+          )
+        }
+      </div>
+      <div
+        class="relative w-full md:w-1/2 mt-12 md:mt-0 grow-1 shrink-0 px-12 py-20 bg-gradient-to-tr via-gray-100 gradient rounded-3xl"
+      >
+        <Image
+          src={mouseScrollGif}
+          alt="Scrollez !"
+          class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[3.75rem] w-20"
+        />
+        <div class="h-[30rem] shadow-2xl overflow-y-auto scrollbar-none scrolling-touch overscroll-non">
+          <Image src={work.data.image} alt="" class="" />
+        </div>
       </div>
     </div>
-    <WorkNavigation previousWork={previousWork} nextWork={nextWork} />
+    <Navigation previousWork={previousWork} nextWork={nextWork} />
   </main>
 </Layout>
+
+<style>
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gradient {
+    background: #f1f1f1;
+    background: linear-gradient(45deg, #f1f1f1, #ffffff);
+  }
+</style>

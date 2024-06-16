@@ -13,7 +13,7 @@ Ce site représente la version digitale du **Guide des golfs de France** par **G
 
 Grâce à un système de filtres, il est possible de rechercher le golf qui nous convient parmis tous les golfs homologués et practices indépendants de France.
 
-**Réalisations**
+## Réalisations :
 
 - Webdesign du site vitrine
 - Intégration d’un thème personnalisé Wordpress

@@ -11,7 +11,7 @@ image: "@assets/images/works/webview/le-courtier.webp"
 
 Déposée depuis 2005, **Le Courtier®** est une marque indépendante française, spécialisée dans les services financiers.
 
-**Réalisations**
+## Réalisations :
 
 - Webdesign
 - Intégration d’un thème personnalisé Wordpress

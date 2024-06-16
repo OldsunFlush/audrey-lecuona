@@ -35,7 +35,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
-  <body>
+  <body class="text-primary tracking-widest">
     <main class="min-h-screen">
       <slot />
     </main>
@@ -44,6 +44,7 @@ const { title } = Astro.props;
       html {
         overflow-y: auto;
         color-scheme: light;
+        background-color: white;
       }
 
       body {
@@ -52,44 +53,14 @@ const { title } = Astro.props;
 
       h1 {
         font-family: "PT Serif", serif;
-        color: black;
+        font-weight: 700;
       }
+
       /* :root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	} */
-      /* main {
-        width: 800px;
-        max-width: calc(100% - 2rem);
-        min-height: 100vh;
-        margin: auto;
-        padding: 1rem;
-        color: white;
-        font-size: 20px;
-        line-height: 1.6;
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
       } */
     </style>
   </body>

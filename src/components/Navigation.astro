@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+import buttonDiceStatic from "../assets/images/button-dice-static.svg";
+import buttonDiceHover from "../assets/images/button-dice-hover.svg";
+
+const { previousWork, nextWork } = Astro.props;
+---
+
+<div class="flex justify-center items-center mt-24">
+  {
+    previousWork?.slug ? (
+      <a href={previousWork?.slug} class="group flex flex-nowrap justify-end basis-full px-3 py-3 no-underline">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1 12.5L24 12.5M1 12.5V12.5C4.96072 13.7377 7.91025 17.0671 8.66148 21.1481L9.18644 24M1 12.5V12.5C4.97897 11.1449 7.91949 7.75161 8.69473 3.62034L9.18644 0.999999"
+            stroke="#3D5361"
+          />
+        </svg>
+        <span class="flex items-center pl-6 group-hover:pl-10 text-sm transition-all">{previousWork?.data.title}</span>
+      </a>
+    ) : (
+      <div class="flex flex-nowrap justify-end basis-full px-3 py-3 invisible" />
+    )
+  }
+  <a href="/works" title="Retour à la galerie" class="group relative basis-[2.5rem] grow-0 shrink-0 mx-16">
+    <Image src={buttonDiceStatic} alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:scale-75 group-hover:opacity-0 transition-all" />
+    <Image src={buttonDiceHover} alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-0 group-hover:w-full transition-all" />
+  </a>
+  {
+    nextWork?.slug ? (
+      <a href={nextWork?.slug} class="group flex flex-nowrap justify-start basis-full px-3 py-3 no-underline">
+        <span class="flex items-center pr-6 group-hover:pr-10 text-sm transition-all">{nextWork?.data.title}</span>
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23 12.5L5.84963e-07 12.5M23 12.5V12.5C19.0393 11.2623 16.0898 7.9329 15.3385 3.85185L14.8136 0.999999M23 12.5V12.5C19.021 13.855 16.0805 17.2484 15.3053 21.3797L14.8136 24"
+            stroke="#3D5361"
+          />
+        </svg>
+      </a>
+    ) : (
+      <div class="flex flex-nowrap justify-end basis-full px-3 py-3 invisible" />
+    )
+  }
+</div>

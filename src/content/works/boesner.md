@@ -13,6 +13,6 @@ websiteUrl: "https://www.boesner.fr/"
 
 Le site commençant à dater, **Boesner** a demandé une refonte graphique afin de rester compétitif face à ses concurrents.
 
-**Réalisations**
+## Réalisations :
 
 - Intégration d’un thème personnalisé Prestashop

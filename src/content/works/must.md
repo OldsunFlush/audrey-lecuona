@@ -12,6 +12,6 @@ websiteUrl: "https://www.clinique-must.com/"
 **Le Groupe MUST** est constitué de chirurgiens experts en chirurgie digestive, endocrinienne et bariatrique. Les praticiens du groupe exercent dans plusieurs centres afin de pouvoir assurer une prise en charge personnalisée et de proximité.
 
 
-**Réalisations**
+## Réalisations :
 
 - Intégration d’un thème personnalisé Wordpress 

@@ -11,6 +11,6 @@ websiteUrl: "https://tatami-originals.com/"
 
 La marque s’adresse à une cible assez jeune, entre 15 et 40 ans ayant un penchant pour la culture culture geek et japonaise avec une sensibilité particulière pour les années 80.
 
-**Réalisations**
+## Réalisations :
 
 - Création de la charte graphique

@@ -13,7 +13,7 @@ websiteUrl: "https://falcktory.com/lifestyle/my-story-box"
 
 La boutique a été développée sous **Prestashop** avec un thème réalisé sur-mesure.
 
-**Réalisations**
+## Réalisations :
 
 - Webdesign de la boutique Prestashop
 - Développement d’un thème personnalisé

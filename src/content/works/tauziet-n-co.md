@@ -13,7 +13,7 @@ image: "@assets/images/works/webview/tauziet-n-co.webp"
 
 Pour maximiser ses performance cette boutique a été développée sur une base **Prestashop** pour la gestion du back-office et grâce au framework **NextJs** pour la partie front-end.
 
-**Réalisations**
+## Réalisations :
 
 - Webdesign de la boutique
 - Développement front-end sous NextJs
