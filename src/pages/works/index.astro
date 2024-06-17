@@ -10,7 +10,7 @@ import linkToResume from "../../assets/documents/cv_audrey-lecuona.pdf";
 ---
 
 <Layout title="Réalisations">
-  <div class="absolute top-6 left-6">
+  <div class="w-full p-6 pb-6">
     <a href="/" class="inline-flex align-center">
       <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -20,11 +20,11 @@ import linkToResume from "../../assets/documents/cv_audrey-lecuona.pdf";
       <span class="pt-0.5 pl-6 hover:pl-10 text-sm transition-all">Retour à l'accueil</span>
     </a>
   </div>
-  <main class="container max-w-6xl">
-    <div class="flex justify-between items-center pt-6 pb-6">
+  <div class="container max-w-6xl">
+    <div class="flex justify-between items-center pb-6">
       <h1 class="text-2xl uppercase">Réalisations</h1>
-      <a href={linkToResume} class="hover:opacity-75 hover:scale-95 transform-gpu transition-all" download>
-        <Image src={buttonToResume} alt="Voir mon CV" />
+      <a href={linkToResume} class="group" download>
+        <Image src={buttonToResume} alt="Voir mon CV" class="w-20 h-20 md:w-24 md:h-24 group-hover:opacity-75 group-hover:scale-95 transform-gpu transition-all" />
       </a>
     </div>
     <ul class="columns-2 md:columns-3 gap-3 md:gap-6">
@@ -32,11 +32,15 @@ import linkToResume from "../../assets/documents/cv_audrey-lecuona.pdf";
         worksEntries.map((worksEntry) => (
           <li class="w-full aspect-auto mb-3 md:mb-6">
             <a href={`/works/${worksEntry.slug}`} title={`En savoir plus sur ${worksEntry.data.title}`}>
-              <Image src={worksEntry.data.thumbnail} alt={worksEntry.data.title} class="grayscale hover:grayscale-0 hover:-translate-y-0.5 rounded-lg transition-all" />
+              <Image
+                src={worksEntry.data.thumbnail}
+                alt={worksEntry.data.title}
+                class="grayscale hover:grayscale-0 hover:-translate-y-0.5 rounded-lg transition-all"
+              />
             </a>
           </li>
         ))
       }
     </ul>
-  </main>
+  </div>
 </Layout>
