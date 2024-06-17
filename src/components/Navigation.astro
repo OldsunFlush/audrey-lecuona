@@ -5,13 +5,14 @@ import diceInitial from "../assets/images/dice-initial.svg";
 import diceHover from "../assets/images/dice-hover.svg";
 
 const { previousWork, nextWork } = Astro.props;
+console.log("🚀 ~ nextWork:", nextWork)
 ---
 
 <div class="flex flex-col md:flex-row justify-center md:items-center mt-12 md:mt-24">
   {
     previousWork?.slug ? (
       <a
-        href={previousWork?.slug}
+        href={`/works/${previousWork?.slug}`}
         class="group flex flex-nowrap basis-full mb-1.5 md:mb-0 md:-ml-3 px-3 py-3 border border-solid border-primary border-opacity-[12.5%] hover:border-opacity-25 md:border-0 rounded no-underline transition-colors"
       >
         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +46,7 @@ const { previousWork, nextWork } = Astro.props;
   {
     nextWork?.slug ? (
       <a
-        href={nextWork?.slug}
+        href={`/works/${nextWork?.slug}`}
         class="group flex flex-nowrap justify-end basis-full mt-1.5 md:mt-0 md:-mr-3 px-3 py-3 text-right border border-primary border-opacity-[12.5%] hover:border-opacity-25 md:border-0 rounded no-underline transition-colors"
       >
         <span class="flex items-center pr-6 group-hover:pr-10 text-sm transition-all">{nextWork?.data.title}</span>
