@@ -10,7 +10,7 @@ import linkToResume from "../../assets/documents/cv_audrey-lecuona.pdf";
 ---
 
 <Layout title="Réalisations">
-  <div class="w-full p-6 pb-6">
+  <header>
     <a href="/" class="inline-flex align-center">
       <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -19,15 +19,19 @@ import linkToResume from "../../assets/documents/cv_audrey-lecuona.pdf";
       </svg>
       <span class="pt-0.5 pl-6 hover:pl-10 text-sm transition-all">Retour à l'accueil</span>
     </a>
-  </div>
-  <div class="container max-w-6xl">
-    <div class="flex justify-between items-center pb-6">
+  </header>
+  <div class="container max-w-6xl pt-20">
+    <div class="animate flex justify-between items-center pb-6">
       <h1 class="text-2xl uppercase">Réalisations</h1>
       <a href={linkToResume} class="group" download>
-        <Image src={buttonToResume} alt="Voir mon CV" class="w-20 h-20 md:w-24 md:h-24 group-hover:opacity-75 group-hover:scale-95 transform-gpu transition-all" />
+        <Image
+          src={buttonToResume}
+          alt="Voir mon CV"
+          class="w-20 h-20 md:w-24 md:h-24 group-hover:opacity-75 group-hover:scale-95 transform-gpu transition-all"
+        />
       </a>
     </div>
-    <ul class="columns-2 md:columns-3 gap-3 md:gap-6">
+    <ul class="animate columns-2 md:columns-3 gap-3 md:gap-6">
       {
         worksEntries.map((worksEntry) => (
           <li class="w-full aspect-auto mb-3 md:mb-6">

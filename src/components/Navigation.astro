@@ -7,7 +7,7 @@ import diceHover from "../assets/images/dice-hover.svg";
 const { previousWork, nextWork } = Astro.props;
 ---
 
-<div class="flex flex-col md:flex-row justify-center md:items-center mt-12 md:mt-24">
+<nav class="animate flex flex-col md:flex-row justify-center md:items-center mt-12 md:mt-24">
   {
     previousWork?.slug ? (
       <a
@@ -60,4 +60,4 @@ const { previousWork, nextWork } = Astro.props;
       <div class="flex flex-nowrap justify-end basis-full px-3 py-3 invisible" />
     )
   }
-</div>
+</nav>

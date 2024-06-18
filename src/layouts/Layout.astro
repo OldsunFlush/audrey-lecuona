@@ -3,21 +3,17 @@ import { ViewTransitions } from "astro:transitions";
 
 import Footer from "@components/Footer.astro";
 
-import "@fontsource/pt-serif/700.css";
-import "@fontsource/lato/400.css";
-import "@fontsource/lato/700.css";
-
 interface Props {
   title: string;
 }
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="fr">
   <head>
-    <ViewTransitions />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
@@ -32,7 +28,7 @@ const { title } = Astro.props;
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="canonical" href={canonicalURL} />
+    <link rel="canonical" href={canonicalURL} />
     <link rel="preload" href="/fonts/lato/lato-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/lato/lato-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/pt-serif/pt-serif-700.woff2" as="font" type="font/woff2" crossorigin />
@@ -44,20 +40,59 @@ const { title } = Astro.props;
     </main>
     <Footer />
     <style is:global>
-      html {
-        color-scheme: light;
-        background-color: white;
-        overflow-y: auto;
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @font-face {
+        font-family: "Lato";
+        src: url("/fonts/lato/lato-400.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Lato";
+        src: url("/fonts/lato/lato-700.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "PT Serif";
+        src: url("/fonts/pt-serif/pt-serif-700.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
       }
 
-      body {
-        font-family: "Lato", system-ui, sans-serif;
+      header {
+        @apply fixed top-0 left-0 right-0 z-50 w-full p-6 bg-white/75 backdrop-blur-md;
       }
 
       h1 {
-        font-family: "PT Serif", serif;
-        font-weight: 700;
+        @apply font-serif;
+      }
+
+      .animate {
+        @apply opacity-0 -translate-y-3 transition-all duration-300;
+      }
+      .animate.show {
+        @apply opacity-100 translate-y-0;
       }
     </style>
+    <script is:inline>
+      function animate() {
+        const animateElements = document.querySelectorAll(".animate");
+
+        animateElements.forEach((element, index) => {
+          setTimeout(() => {
+            element.classList.add("show");
+          }, index * 100);
+        });
+      }
+      document.addEventListener("DOMContentLoaded", () => animate());
+      document.addEventListener("astro:after-swap", () => animate());
+    </script>
   </body>
 </html>

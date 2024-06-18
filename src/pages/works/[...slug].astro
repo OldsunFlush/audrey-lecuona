@@ -45,7 +45,7 @@ const { Content } = await work.render();
 ---
 
 <Layout title={`${work.data.title} · Réalisations`}>
-  <div class="w-full p-6 pb-12">
+  <header>
     <a href="/works" class="inline-flex align-center">
       <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -54,10 +54,10 @@ const { Content } = await work.render();
       </svg>
       <span class="pt-0.5 pl-6 hover:pl-10 text-sm transition-all">Retour à la galerie</span>
     </a>
-  </div>
-  <div class="container">
+  </header>
+  <div class="container pt-24 lg:pt-36">
     <div class="flex flex-col lg:flex-row items-start">
-      <div class="w-full lg:w-2/5 lg:mr-[10%]">
+      <article class="animate w-full lg:w-2/5 lg:mr-[10%]">
         <Prose>
           <Content />
         </Prose>
@@ -72,9 +72,9 @@ const { Content } = await work.render();
             </a>
           )
         }
-      </div>
+      </article>
       <div
-        class="relative w-full h-full lg:w-1/2 mt-24 lg:mt-0 grow-1 shrink-0 px-3 sm:px-6 md:px-12 py-3 sm:py-6 md:py-12 xl:py-20 bg-gradient-to-tr via-gray-100 gradient rounded-xl sm:rounded-2xl md:rounded-3xl"
+        class="animate relative w-full h-full lg:w-1/2 mt-24 lg:mt-0 grow-1 shrink-0 px-3 sm:px-6 md:px-12 py-3 sm:py-6 md:py-12 xl:py-20 bg-gradient-to-tr via-gray-100 gradient rounded-xl sm:rounded-2xl md:rounded-3xl"
       >
         <Image
           src={mouseScrollGif}
