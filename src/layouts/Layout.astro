@@ -32,8 +32,13 @@ const { title } = Astro.props;
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="canonical" href={canonicalURL} />
+    <link rel="preload" href="/fonts/lato/lato-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/lato/lato-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/pt-serif/pt-serif-700.woff2" as="font" type="font/woff2" crossorigin />
+    <ViewTransitions />
   </head>
-  <body class="text-primary tracking-widest">
+  <body class="font-sans text-primary tracking-widest antialiased">
     <main class="min-h-screen">
       <slot />
     </main>
